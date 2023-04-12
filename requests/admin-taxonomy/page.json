@@ -1,0 +1,52 @@
+{
+	"actions": {
+		"add-category": {
+			"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/47275/taxonomy-categories",
+			"method": "POST"
+		},
+		"delete": {
+			"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/47275",
+			"method": "DELETE"
+		},
+		"get": {
+			"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/47275",
+			"method": "GET"
+		},
+		"replace": {
+			"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/47275",
+			"method": "PUT"
+		},
+		"update": {
+			"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/47275",
+			"method": "PATCH"
+		}
+	},
+	"availableLanguages": [
+		"en-US"
+	],
+	"creator": {
+		"additionalName": "",
+		"contentType": "UserAccount",
+		"familyName": "Test",
+		"givenName": "Test",
+		"id": 20123,
+		"name": "Test Test",
+		"profileURL": "/web/test"
+	},
+	"dateCreated": "2023-03-22T15:10:18Z",
+	"dateModified": "2023-03-22T15:10:18Z",
+	"description": "jlgcr5x3",
+	"externalReferenceCode": "iehxpdxo",
+	"id": "47275",
+	"name": "ukvvh3dy",
+	"numberOfTaxonomyCategories": 0,
+	"parentTaxonomyVocabulary": {
+		"id": 47262,
+		"name": "dLcnPqnk"
+	},
+	"siteId": 47260,
+	"taxonomyCategoryProperties": [],
+	"taxonomyCategoryUsageCount": 0,
+	"taxonomyVocabularyId": 47262
+}, {"actions": {"add-category": {"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/44190/taxonomy-categories", "method": "POST"}, "delete": {"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/44190", "method": "DELETE"}, "get": {"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/44190", "method": "GET"}, "replace": {"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/44190", "method": "PUT"}, "update": {"href": "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/44190", "method": "PATCH"}}, "availableLanguages": [], "creator": {"additionalName": "", "contentType": "UserAccount", "familyName": "Test", "givenName": "Test", "id": 20123, "name": "Test Test", "profileURL": "/web/test"}, "dateCreated": "2023-03-17T10:26:30Z", "dateModified": "2023-03-17T10:26:30Z", "description": "", "externalReferenceCode": "47a0bcc1-5960-d968-0d32-c615f6a3fb6f", "id": "44190", "name": "C1 V3", "numberOfTaxonomyCategories": 0, "parentTaxonomyVocabulary": {"id": 44189, "name": "v3"}, "siteId": 20119, "taxonomyCategoryProperties": [], "taxonomyCategoryUsageCount": 0, "taxonomyVocabularyId": 44189
+}

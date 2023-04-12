@@ -5,13 +5,13 @@ site_id=$(DB_NAME="lp1" site_friendly_url='/guest'; export MYSQL_PWD=test; mysql
 echo "site_id: $site_id"
 
 echo "*************************************************************************"
-echo "* Get Structured Contents - Flatten = true"
+echo "* Post Structured Contents"
 echo "*************************************************************************"
 
 set -x
-#curl -s -X 'GET' "http://localhost:8080/o/headless-admin-content/v1.0/sites/${site_id}/structured-contents?fields=title,externalReferenceCode,contentFields" \
-curl -s -X 'GET' "http://localhost:8080/o/headless-admin-content/v1.0/sites/${site_id}/structured-contents" \
+curl -s -X 'POST' "http://localhost:8080/o/headless-admin-content/v1.0/sites/${site_id}/structured-contents/draft" \
   -H 'Accept-Language: en-US' \
+  -H 'Content-Type: application/json' \
   -u 'test@liferay.com:test' \
   | jq '.'
 

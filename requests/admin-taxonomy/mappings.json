@@ -1,0 +1,7869 @@
+{
+	"liferay-20097-search-tuning-synonyms": {
+		"mappings": {
+			"properties": {
+				"index": {
+					"type": "keyword",
+					"store": true
+				},
+				"synonyms": {
+					"type": "text",
+					"store": true,
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-frequent-pattern-commerce-ml-recommendation": {
+		"mappings": {
+			"properties": {
+				"antecedentIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"antecedentIdsLength": {
+					"type": "long",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"index": false,
+					"store": true
+				},
+				"jobId": {
+					"type": "keyword",
+					"index": false,
+					"store": true
+				},
+				"recommendedEntryClassPK": {
+					"type": "long",
+					"store": true
+				},
+				"score": {
+					"type": "float",
+					"index": false,
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-search-tuning-rankings": {
+		"mappings": {
+			"properties": {
+				"aliases": {
+					"type": "text",
+					"store": true
+				},
+				"blocks": {
+					"type": "keyword",
+					"store": true
+				},
+				"inactive": {
+					"type": "boolean",
+					"store": true
+				},
+				"index": {
+					"type": "keyword",
+					"store": true
+				},
+				"name": {
+					"type": "text",
+					"store": true,
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"pins": {
+					"type": "nested",
+					"properties": {
+						"position": {
+							"type": "integer",
+							"store": true
+						},
+						"uid": {
+							"type": "keyword",
+							"store": true
+						}
+					}
+				},
+				"queryString": {
+					"type": "text",
+					"store": true,
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"queryStrings": {
+					"type": "text",
+					"store": true,
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						}
+					}
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-workflow-metrics-instances": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_ar": {
+						"match": "\\w+_ar\\b|\\w+_ar_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "arabic",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_bg": {
+						"match": "\\w+_bg\\b|\\w+_bg_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "bulgarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ca": {
+						"match": "\\w+_ca\\b|\\w+_ca_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "catalan",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_cs": {
+						"match": "\\w+_cs\\b|\\w+_cs_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "czech",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_da": {
+						"match": "\\w+_da\\b|\\w+_da_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "danish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_de": {
+						"match": "\\w+_de\\b|\\w+_de_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "german",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_el": {
+						"match": "\\w+_el\\b|\\w+_el_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "greek",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_en": {
+						"match": "\\w+_en\\b|\\w+_en_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "english",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_es": {
+						"match": "\\w+_es\\b|\\w+_es_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "spanish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_eu": {
+						"match": "\\w+_eu\\b|\\w+_eu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "basque",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fi": {
+						"match": "\\w+_fi\\b|\\w+_fi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "finnish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fr": {
+						"match": "\\w+_fr\\b|\\w+_fr_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "french",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hi": {
+						"match": "\\w+_hi\\b|\\w+_hi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hindi",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hu": {
+						"match": "\\w+_hu\\b|\\w+_hu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hungarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hy": {
+						"match": "\\w+_hy\\b|\\w+_hy_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "armenian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_id": {
+						"match": "\\w+_id\\b|\\w+_id_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "indonesian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_it": {
+						"match": "\\w+_it\\b|\\w+_it_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "italian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ja": {
+						"match": "\\w+_ja\\b|\\w+_ja_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "kuromoji",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ko": {
+						"match": "\\w+_ko\\b|\\w+_ko_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "cjk",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_nl": {
+						"match": "\\w+_nl\\b|\\w+_nl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "dutch",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_no": {
+						"match": "\\w+_nb\\b|\\w+_nb_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "norwegian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pl": {
+						"match": "\\w+_pl\\b|\\w+_pl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "polish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt": {
+						"match": "\\w+_pt\\b|\\w+_pt_PT\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "portuguese",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt_br": {
+						"match": "*_pt_BR",
+						"match_mapping_type": "string",
+						"mapping": {
+							"analyzer": "brazilian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ro": {
+						"match": "\\w+_ro\\b|\\w+_ro_RO\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "romanian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ru": {
+						"match": "\\w+_ru\\b|\\w+_ru_RU\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "russian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_string_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "string",
+						"mapping": {
+							"normalizer": "keyword_lowercase",
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_sv": {
+						"match": "\\w+_sv\\b|\\w+_sv_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "swedish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_th": {
+						"match": "\\w+_th\\b|\\w+_th_TH\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "thai",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_tr": {
+						"match": "\\w+_tr\\b|\\w+_tr_TR\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "turkish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_zh": {
+						"match": "\\w+_zh\\b|\\w+_zh_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "smartcn",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"active": {
+					"type": "boolean",
+					"store": true
+				},
+				"assetTitle": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"assetType": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"className": {
+					"type": "keyword",
+					"store": true
+				},
+				"classPK": {
+					"type": "long",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"completed": {
+					"type": "boolean",
+					"store": true
+				},
+				"completionDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"createDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"deleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"duration": {
+					"type": "long",
+					"store": true
+				},
+				"id": {
+					"type": "long",
+					"store": true
+				},
+				"instanceId": {
+					"type": "long",
+					"store": true
+				},
+				"modifiedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"processId": {
+					"type": "long",
+					"store": true
+				},
+				"slaDefinitionIds": {
+					"type": "long",
+					"store": true
+				},
+				"slaResults": {
+					"type": "nested",
+					"properties": {
+						"onTime": {
+							"type": "boolean",
+							"store": true
+						},
+						"overdueDate": {
+							"type": "date",
+							"store": true,
+							"format": "yyyyMMddHHmmss"
+						},
+						"remainingTime": {
+							"type": "long",
+							"store": true
+						},
+						"slaDefinitionId": {
+							"type": "long",
+							"store": true
+						},
+						"status": {
+							"type": "keyword",
+							"store": true
+						}
+					}
+				},
+				"slaStatus": {
+					"type": "keyword",
+					"store": true
+				},
+				"tasks": {
+					"type": "nested",
+					"properties": {
+						"assigneeGroupIds": {
+							"type": "long",
+							"store": true
+						},
+						"assigneeIds": {
+							"type": "long",
+							"store": true
+						},
+						"assigneeName": {
+							"type": "keyword",
+							"store": true
+						},
+						"assigneeType": {
+							"type": "keyword",
+							"store": true
+						},
+						"taskId": {
+							"type": "long",
+							"store": true
+						},
+						"taskName": {
+							"type": "keyword",
+							"store": true
+						}
+					}
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				},
+				"userId": {
+					"type": "long",
+					"store": true
+				},
+				"userName": {
+					"type": "keyword",
+					"store": true
+				},
+				"version": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-product-content-commerce-ml-recommendation": {
+		"mappings": {
+			"properties": {
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"index": false,
+					"store": true
+				},
+				"entryClassPK": {
+					"type": "long",
+					"store": true
+				},
+				"jobId": {
+					"type": "keyword",
+					"index": false,
+					"store": true
+				},
+				"rank": {
+					"type": "integer",
+					"index": false,
+					"store": true
+				},
+				"recommendedEntryClassPK": {
+					"type": "long",
+					"index": false,
+					"store": true
+				},
+				"score": {
+					"type": "float",
+					"index": false,
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-user-commerce-ml-recommendation": {
+		"mappings": {
+			"properties": {
+				"assetCategoryIds": {
+					"type": "long",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"index": false,
+					"store": true
+				},
+				"entryClassPK": {
+					"type": "long",
+					"store": true
+				},
+				"jobId": {
+					"type": "keyword",
+					"index": false,
+					"store": true
+				},
+				"recommendedEntryClassPK": {
+					"type": "long",
+					"index": false,
+					"store": true
+				},
+				"score": {
+					"type": "float",
+					"index": false,
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-workflow-metrics-transitions": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"deleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"id": {
+					"type": "long",
+					"store": true
+				},
+				"modifiedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"name": {
+					"type": "keyword",
+					"store": true
+				},
+				"nodeId": {
+					"type": "long",
+					"store": true
+				},
+				"processId": {
+					"type": "long",
+					"store": true
+				},
+				"sourceNodeId": {
+					"type": "long",
+					"store": true
+				},
+				"sourceNodeName": {
+					"type": "keyword",
+					"store": true
+				},
+				"targetNodeId": {
+					"type": "long",
+					"store": true
+				},
+				"targetNodeName": {
+					"type": "keyword",
+					"store": true
+				},
+				"transitionId": {
+					"type": "long",
+					"store": true
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				},
+				"userId": {
+					"type": "long",
+					"store": true
+				},
+				"version": {
+					"type": "text",
+					"fields": {
+						"keyword": {
+							"type": "keyword",
+							"ignore_above": 256
+						}
+					}
+				}
+			}
+		}
+	},
+	"liferay-20097-workflow-metrics-tasks": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_ar": {
+						"match": "\\w+_ar\\b|\\w+_ar_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "arabic",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_bg": {
+						"match": "\\w+_bg\\b|\\w+_bg_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "bulgarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ca": {
+						"match": "\\w+_ca\\b|\\w+_ca_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "catalan",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_cs": {
+						"match": "\\w+_cs\\b|\\w+_cs_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "czech",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_da": {
+						"match": "\\w+_da\\b|\\w+_da_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "danish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_de": {
+						"match": "\\w+_de\\b|\\w+_de_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "german",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_el": {
+						"match": "\\w+_el\\b|\\w+_el_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "greek",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_en": {
+						"match": "\\w+_en\\b|\\w+_en_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "english",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_es": {
+						"match": "\\w+_es\\b|\\w+_es_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "spanish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_eu": {
+						"match": "\\w+_eu\\b|\\w+_eu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "basque",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fi": {
+						"match": "\\w+_fi\\b|\\w+_fi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "finnish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fr": {
+						"match": "\\w+_fr\\b|\\w+_fr_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "french",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hi": {
+						"match": "\\w+_hi\\b|\\w+_hi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hindi",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hu": {
+						"match": "\\w+_hu\\b|\\w+_hu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hungarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hy": {
+						"match": "\\w+_hy\\b|\\w+_hy_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "armenian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_id": {
+						"match": "\\w+_id\\b|\\w+_id_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "indonesian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_it": {
+						"match": "\\w+_it\\b|\\w+_it_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "italian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ja": {
+						"match": "\\w+_ja\\b|\\w+_ja_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "kuromoji",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ko": {
+						"match": "\\w+_ko\\b|\\w+_ko_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "cjk",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_nl": {
+						"match": "\\w+_nl\\b|\\w+_nl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "dutch",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_no": {
+						"match": "\\w+_nb\\b|\\w+_nb_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "norwegian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pl": {
+						"match": "\\w+_pl\\b|\\w+_pl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "polish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt": {
+						"match": "\\w+_pt\\b|\\w+_pt_PT\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "portuguese",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt_br": {
+						"match": "*_pt_BR",
+						"match_mapping_type": "string",
+						"mapping": {
+							"analyzer": "brazilian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ro": {
+						"match": "\\w+_ro\\b|\\w+_ro_RO\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "romanian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ru": {
+						"match": "\\w+_ru\\b|\\w+_ru_RU\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "russian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_string_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "string",
+						"mapping": {
+							"normalizer": "keyword_lowercase",
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_sv": {
+						"match": "\\w+_sv\\b|\\w+_sv_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "swedish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_th": {
+						"match": "\\w+_th\\b|\\w+_th_TH\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "thai",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_tr": {
+						"match": "\\w+_tr\\b|\\w+_tr_TR\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "turkish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_zh": {
+						"match": "\\w+_zh\\b|\\w+_zh_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "smartcn",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"active": {
+					"type": "boolean",
+					"store": true
+				},
+				"assetTitle": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"assetType": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"assigneeIds": {
+					"type": "long",
+					"store": true
+				},
+				"assigneeType": {
+					"type": "keyword",
+					"store": true
+				},
+				"className": {
+					"type": "keyword",
+					"store": true
+				},
+				"classPK": {
+					"type": "long",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"completed": {
+					"type": "boolean",
+					"store": true
+				},
+				"completionDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"completionUserId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"deleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"duration": {
+					"type": "long",
+					"store": true
+				},
+				"id": {
+					"type": "long",
+					"store": true
+				},
+				"instanceCompleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"instanceCompletionDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"instanceId": {
+					"type": "long",
+					"store": true
+				},
+				"modifiedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"name": {
+					"type": "keyword",
+					"store": true
+				},
+				"name_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"nodeId": {
+					"type": "long",
+					"store": true
+				},
+				"processId": {
+					"type": "long",
+					"store": true
+				},
+				"taskId": {
+					"type": "long",
+					"store": true
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				},
+				"userId": {
+					"type": "long",
+					"store": true
+				},
+				"version": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-product-interaction-commerce-ml-recommendation": {
+		"mappings": {
+			"properties": {
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"index": false,
+					"store": true
+				},
+				"entryClassPK": {
+					"type": "long",
+					"store": true
+				},
+				"jobId": {
+					"type": "keyword",
+					"index": false,
+					"store": true
+				},
+				"rank": {
+					"type": "integer",
+					"index": false,
+					"store": true
+				},
+				"recommendedEntryClassPK": {
+					"type": "long",
+					"index": false,
+					"store": true
+				},
+				"score": {
+					"type": "float",
+					"index": false,
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_ddmFieldArray_ddmFieldValue_Number_sortable": {
+						"path_match": "ddmFieldArray.ddmFieldValue*Number_sortable",
+						"mapping": {
+							"scaling_factor": 1000,
+							"store": true,
+							"type": "scaled_float"
+						}
+					}
+				},
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ar": {
+						"match": "\\w+_ar_[A-Z]{2}_sortable\\b|\\w+_ar_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ar",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_bg": {
+						"match": "\\w+_bg_[A-Z]{2}_sortable\\b|\\w+_bg_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "bg",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ca": {
+						"match": "\\w+_ca_[A-Z]{2}_sortable\\b|\\w+_ca_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ca",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_cs": {
+						"match": "\\w+_cs_[A-Z]{2}_sortable\\b|\\w+_cs_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "cs",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_da": {
+						"match": "\\w+_da_[A-Z]{2}_sortable\\b|\\w+_da_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "da",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_de_AT": {
+						"match": "\\w+_de_AT_sortable\\b|\\w+_de_AT_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"country": "AT",
+							"language": "de",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_de": {
+						"match": "\\w+_de_[A-Z]{2}_sortable\\b|\\w+_de_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "de",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_el": {
+						"match": "\\w+_el_[A-Z]{2}_sortable\\b|\\w+_el_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "el",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_en": {
+						"match": "\\w+_en_[A-Z]{2}_sortable\\b|\\w+_en_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "en",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_es": {
+						"match": "\\w+_es_[A-Z]{2}_sortable\\b|\\w+_es_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "es",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_et": {
+						"match": "\\w+_et_[A-Z]{2}_sortable\\b|\\w+_et_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "et",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_eu": {
+						"match": "\\w+_eu_[A-Z]{2}_sortable\\b|\\w+_eu_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "eu",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fa": {
+						"match": "\\w+_fa_[A-Z]{2}_sortable\\b|\\w+_fa_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "fa",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fi": {
+						"match": "\\w+_fi_[A-Z]{2}_sortable\\b|\\w+_fi_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "fi",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fr_CA": {
+						"match": "\\w+_fr_CA_sortable\\b|\\w+_fr_CA_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"country": "CA",
+							"language": "fr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fr": {
+						"match": "\\w+_fr_[A-Z]{2}_sortable\\b|\\w+_fr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "fr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_gl": {
+						"match": "\\w+_gl_[A-Z]{2}_sortable\\b|\\w+_gl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "gl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hi": {
+						"match": "\\w+_hi_[A-Z]{2}_sortable\\b|\\w+_hi_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hi",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hr": {
+						"match": "\\w+_hr_[A-Z]{2}_sortable\\b|\\w+_hr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hu": {
+						"match": "\\w+_hu_[A-Z]{2}_sortable\\b|\\w+_hu_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hu",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hy": {
+						"match": "\\w+_hy_[A-Z]{2}_sortable\\b|\\w+_hy_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hy",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_in": {
+						"match": "\\w+_in_[A-Z]{2}_sortable\\b|\\w+_in_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "in",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_it": {
+						"match": "\\w+_it_[A-Z]{2}_sortable\\b|\\w+_it_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "it",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ja": {
+						"match": "\\w+_ja_[A-Z]{2}_sortable\\b|\\w+_ja_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ja",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_kk": {
+						"match": "\\w+_kk_[A-Z]{2}_sortable\\b|\\w+_kk_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "kk",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ko": {
+						"match": "\\w+_ko_[A-Z]{2}_sortable\\b|\\w+_ko_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ko",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_lo": {
+						"match": "\\w+_lo_[A-Z]{2}_sortable\\b|\\w+_lo_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "lo",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_lt": {
+						"match": "\\w+_lt_[A-Z]{2}_sortable\\b|\\w+_lt_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "lt",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ms": {
+						"match": "\\w+_ms_[A-Z]{2}_sortable\\b|\\w+_ms_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ms",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_nb": {
+						"match": "\\w+_nb_[A-Z]{2}_sortable\\b|\\w+_nb_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "nb",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_nl": {
+						"match": "\\w+_nl_[A-Z]{2}_sortable\\b|\\w+_nl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "nl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_no": {
+						"match": "\\w+_no_[A-Z]{2}_sortable\\b|\\w+_no_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "no",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_pl": {
+						"match": "\\w+_pl_[A-Z]{2}_sortable\\b|\\w+_pl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "pl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_pt": {
+						"match": "\\w+_pt_[A-Z]{2}_sortable\\b|\\w+_pt_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "pt",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ro": {
+						"match": "\\w+_ro_[A-Z]{2}_sortable\\b|\\w+_ro_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ro",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ru": {
+						"match": "\\w+_ru_[A-Z]{2}_sortable\\b|\\w+_ru_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ru",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sk": {
+						"match": "\\w+_sk_[A-Z]{2}_sortable\\b|\\w+_sk_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sk",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sl": {
+						"match": "\\w+_sl_[A-Z]{2}_sortable\\b|\\w+_sl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sr": {
+						"match": "\\w+_sr_[A-Z]{2}_sortable\\b|\\w+_sr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sv": {
+						"match": "\\w+_sv_[A-Z]{2}_sortable\\b|\\w+_sv_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sv",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ta": {
+						"match": "\\w+_ta_[A-Z]{2}_sortable\\b|\\w+_ta_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ta",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_th": {
+						"match": "\\w+_th_[A-Z]{2}_sortable\\b|\\w+_th_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "th",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_tr": {
+						"match": "\\w+_tr_[A-Z]{2}_sortable\\b|\\w+_tr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "tr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_uk": {
+						"match": "\\w+_uk_[A-Z]{2}_sortable\\b|\\w+_uk_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "uk",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_vi": {
+						"match": "\\w+_vi_[A-Z]{2}_sortable\\b|\\w+_vi_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "vi",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_zh": {
+						"match": "\\w+_zh_[A-Z]{2}_sortable\\b|\\w+_zh_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "zh",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_geolocation": {
+						"match": "*_geolocation",
+						"mapping": {
+							"fields": {
+								"geopoint": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "geo_point"
+						}
+					}
+				},
+				{
+					"template_ddmFieldArray_ddmFieldValueKeyword": {
+						"path_match": "ddmFieldArray.ddmFieldValueKeyword*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_ddm_keyword": {
+						"match": "ddm__keyword__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_expando_keyword": {
+						"match": "expando__keyword__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"analyzer": "keyword_lowercase",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ar": {
+						"match": "\\w+_ar\\b|\\w+_ar_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "arabic",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_bg": {
+						"match": "\\w+_bg\\b|\\w+_bg_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "bulgarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ca": {
+						"match": "\\w+_ca\\b|\\w+_ca_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "catalan",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_cs": {
+						"match": "\\w+_cs\\b|\\w+_cs_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "czech",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_da": {
+						"match": "\\w+_da\\b|\\w+_da_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "danish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_de": {
+						"match": "\\w+_de\\b|\\w+_de_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "german",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_el": {
+						"match": "\\w+_el\\b|\\w+_el_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "greek",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_en": {
+						"match": "\\w+_en\\b|\\w+_en_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "english",
+							"search_analyzer": "liferay_analyzer_en",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_es": {
+						"match": "\\w+_es\\b|\\w+_es_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "spanish",
+							"search_analyzer": "liferay_analyzer_es",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_et": {
+						"match": "\\w+_et\\b|\\w+_et_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "estonian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_eu": {
+						"match": "\\w+_eu\\b|\\w+_eu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "basque",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fa": {
+						"match": "\\w+_fa\\b|\\w+_fa_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "persian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fi": {
+						"match": "\\w+_fi\\b|\\w+_fi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "finnish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fr": {
+						"match": "\\w+_fr\\b|\\w+_fr_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "french",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_gl": {
+						"match": "\\w+_gl\\b|\\w+_gl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "galician",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hi": {
+						"match": "\\w+_hi\\b|\\w+_hi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hindi",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hu": {
+						"match": "\\w+_hu\\b|\\w+_hu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hungarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hy": {
+						"match": "\\w+_hy\\b|\\w+_hy_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "armenian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_in": {
+						"match": "\\w+_in\\b|\\w+_in_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "indonesian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_it": {
+						"match": "\\w+_it\\b|\\w+_it_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "italian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ja": {
+						"match": "\\w+_ja\\b|\\w+_ja_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "kuromoji",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ko": {
+						"match": "\\w+_ko\\b|\\w+_ko_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "cjk",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_lt": {
+						"match": "\\w+_lt\\b|\\w+_lt_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "lithuanian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_nl": {
+						"match": "\\w+_nl\\b|\\w+_nl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "dutch",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_no": {
+						"match": "\\w+_nb\\b|\\w+_nb_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "norwegian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pl": {
+						"match": "\\w+_pl\\b|\\w+_pl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "polish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt": {
+						"match": "\\w+_pt\\b|\\w+_pt_PT\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "portuguese",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt_br": {
+						"match": "*_pt_BR",
+						"match_mapping_type": "string",
+						"mapping": {
+							"analyzer": "brazilian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ro": {
+						"match": "\\w+_ro\\b|\\w+_ro_RO\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "romanian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ru": {
+						"match": "\\w+_ru\\b|\\w+_ru_RU\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "russian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_sv": {
+						"match": "\\w+_sv\\b|\\w+_sv_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "swedish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_th": {
+						"match": "\\w+_th\\b|\\w+_th_TH\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "thai",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_tr": {
+						"match": "\\w+_tr\\b|\\w+_tr_TR\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "turkish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_zh": {
+						"match": "\\w+_zh\\b|\\w+_zh_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "smartcn",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ddmFieldArray_ddmFieldValueText": {
+						"path_match": "ddmFieldArray.ddmFieldValueText*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ddm": {
+						"match": "ddm__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_expando": {
+						"match": "expando__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_double": {
+						"match": "*_double",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "double"
+						}
+					}
+				},
+				{
+					"template_float": {
+						"match": "*_float",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "float"
+						}
+					}
+				},
+				{
+					"template_integer": {
+						"match": "*_integer",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "integer"
+						}
+					}
+				},
+				{
+					"template_long": {
+						"match": "*_long",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_short": {
+						"match": "*_short",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "short"
+						}
+					}
+				},
+				{
+					"template_text_embedding_256": {
+						"path_match": "text_embedding_256*",
+						"mapping": {
+							"dims": 256,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_384": {
+						"path_match": "text_embedding_384*",
+						"mapping": {
+							"dims": 384,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_512": {
+						"path_match": "text_embedding_512*",
+						"mapping": {
+							"dims": 512,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_768": {
+						"path_match": "text_embedding_768*",
+						"mapping": {
+							"dims": 768,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_1024": {
+						"path_match": "text_embedding_1024*",
+						"mapping": {
+							"dims": 1024,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_commerce_attribute": {
+						"match": "*_VALUES_NAMES",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_commerce_attribute_ids": {
+						"match": "*_VALUES_IDS",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_commerce_attribute_id": {
+						"match": "*_VALUE_ID",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_commerce_specification": {
+						"match": "*_VALUE_NAME",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_terms_set_required_matches": {
+						"match": "*_required_matches",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "integer"
+						}
+					}
+				},
+				{
+					"template_": {
+						"match": "*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"ATTRIBUTE_package-quantity_VALUES_IDS": {
+					"type": "keyword",
+					"store": true
+				},
+				"CPDefinitionId": {
+					"type": "text",
+					"store": true
+				},
+				"CPDefinitionOptionRelId": {
+					"type": "text",
+					"store": true
+				},
+				"CPDefinitionStatus": {
+					"type": "text",
+					"store": true
+				},
+				"CPOptionId": {
+					"type": "text",
+					"store": true
+				},
+				"CPOptionId_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"DDMFormFieldTypeName": {
+					"type": "text",
+					"store": true
+				},
+				"SPECIFICATION_material_VALUE_ID": {
+					"type": "keyword",
+					"store": true
+				},
+				"SPECIFICATION_material_VALUE_ID_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"SPECIFICATION_warranty_VALUE_ID": {
+					"type": "keyword",
+					"store": true
+				},
+				"SPECIFICATION_warranty_VALUE_ID_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"accountEntryId": {
+					"type": "text",
+					"store": true
+				},
+				"accountGroupFilterEnabled": {
+					"type": "text",
+					"store": true
+				},
+				"active": {
+					"type": "text",
+					"store": true
+				},
+				"advanceStatus": {
+					"type": "keyword",
+					"store": true
+				},
+				"ancestorOrganizationIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"ar_SA_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"ar_SA_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"ar_SA_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"articleId": {
+					"type": "text",
+					"store": true,
+					"analyzer": "keyword_lowercase"
+				},
+				"articleId_String_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetCategoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetCategoryTitle": {
+					"type": "text",
+					"store": true
+				},
+				"assetCategoryTitle_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"assetCategoryTitles_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"assetCount": {
+					"type": "text",
+					"store": true
+				},
+				"assetCount_Number_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"assetEntryId": {
+					"type": "text",
+					"store": true
+				},
+				"assetEntryId_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"assetInternalCategoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetInternalCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetTagId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetTagIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetTagNames": {
+					"type": "text",
+					"store": true,
+					"fields": {
+						"raw": {
+							"type": "keyword",
+							"store": true
+						}
+					},
+					"term_vector": "with_positions_offsets"
+				},
+				"assetTagNames_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"assetVocabularyCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetVocabularyId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetVocabularyIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"basePrice": {
+					"type": "double",
+					"store": true
+				},
+				"basePrice_sortable": {
+					"type": "float"
+				},
+				"birthDate": {
+					"type": "text",
+					"store": true
+				},
+				"birthDate_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"ca_ES_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"ca_ES_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"ca_ES_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"calendarId": {
+					"type": "text",
+					"store": true
+				},
+				"catalogBasePriceList": {
+					"type": "text",
+					"store": true
+				},
+				"catalogDefaultLanguageId": {
+					"type": "text",
+					"store": true
+				},
+				"catalogId": {
+					"type": "text",
+					"store": true
+				},
+				"catalogId_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"cdn": {
+					"type": "text",
+					"store": true
+				},
+				"channelFilterEnabled": {
+					"type": "text",
+					"store": true
+				},
+				"city": {
+					"type": "text",
+					"store": true
+				},
+				"classNameId": {
+					"type": "text",
+					"store": true
+				},
+				"classPK": {
+					"type": "text",
+					"store": true
+				},
+				"classTypeId": {
+					"type": "keyword",
+					"store": true
+				},
+				"commerceAccountGroupIds_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"commerceAccountGroupIds_required_matches_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"commerceAccountId": {
+					"type": "keyword",
+					"store": true
+				},
+				"commerceCatalogId": {
+					"type": "text",
+					"store": true
+				},
+				"commerceChannelGroupId": {
+					"type": "text",
+					"store": true
+				},
+				"commerceChannelGroupIds": {
+					"type": "text",
+					"store": true
+				},
+				"commerceChannelGroupIds_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"commercePriceListId": {
+					"type": "text",
+					"store": true
+				},
+				"commerceShippingMethodId": {
+					"type": "text",
+					"store": true
+				},
+				"companyId": {
+					"type": "keyword",
+					"store": true
+				},
+				"configurationModelAttributeName": {
+					"type": "keyword",
+					"store": true
+				},
+				"configurationModelFactoryPid": {
+					"type": "keyword",
+					"store": true
+				},
+				"configurationModelId": {
+					"type": "keyword",
+					"store": true
+				},
+				"content": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"contentLength_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"contentLength_en_US_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"content_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"content_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"content_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"content_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"content_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"content_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"content_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"content_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"content_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"content_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"content_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"content_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"content_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"countryTwoLettersISOCode": {
+					"type": "text",
+					"store": true
+				},
+				"couponCode": {
+					"type": "keyword",
+					"store": true
+				},
+				"cpDefinitionName": {
+					"type": "text",
+					"store": true
+				},
+				"cpDefinitionName_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"cpInstanceId": {
+					"type": "text",
+					"store": true
+				},
+				"cpOptionCategoryId": {
+					"type": "text",
+					"store": true
+				},
+				"cpOptionCategoryTitle_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"cpProductId": {
+					"type": "text",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"createDate_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"criterionType_organization_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"criterionType_role_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"criterionType_user_group_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"criterionType_user_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"dataRepositoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"ddmContent": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"ddmFieldArray": {
+					"type": "nested",
+					"properties": {
+						"ddmFieldName": {
+							"type": "keyword"
+						},
+						"ddmFieldValueText": {
+							"type": "text",
+							"store": true
+						},
+						"ddmFieldValueText_String_sortable": {
+							"type": "keyword",
+							"store": true
+						},
+						"ddmFieldValueText_en_US": {
+							"type": "text",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"analyzer": "english",
+							"search_analyzer": "liferay_analyzer_en"
+						},
+						"ddmFieldValueText_en_US_String_sortable": {
+							"type": "icu_collation_keyword",
+							"store": true,
+							"language": "en"
+						},
+						"ddmValueFieldName": {
+							"type": "keyword"
+						}
+					}
+				},
+				"ddmStructureKey": {
+					"type": "keyword",
+					"store": true
+				},
+				"ddmTemplateKey": {
+					"type": "keyword",
+					"store": true
+				},
+				"de_DE_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"de_DE_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"de_DE_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"defaultImageFileEntryId": {
+					"type": "text",
+					"store": true
+				},
+				"defaultImageFileEntryId_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"defaultImageFileUrl": {
+					"type": "text",
+					"store": true
+				},
+				"defaultLanguageId": {
+					"type": "keyword",
+					"store": true
+				},
+				"defaultUser": {
+					"type": "text",
+					"store": true
+				},
+				"definitionOptionValueRelName": {
+					"type": "text",
+					"store": true
+				},
+				"definitionOptionValueRelName_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"depth": {
+					"type": "text",
+					"store": true
+				},
+				"depth_sortable": {
+					"type": "float"
+				},
+				"description": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"description_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"description_ar_SA_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ar"
+				},
+				"description_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"description_ca_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ca"
+				},
+				"description_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"description_de_DE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "de"
+				},
+				"description_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"description_en_US_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "en"
+				},
+				"description_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"description_es_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "es"
+				},
+				"description_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"description_fi_FI_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fi"
+				},
+				"description_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"description_fr_FR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fr"
+				},
+				"description_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"description_hu_HU_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "hu"
+				},
+				"description_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"description_ja_JP_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ja"
+				},
+				"description_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"description_nl_NL_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "nl"
+				},
+				"description_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"description_pt_BR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "pt"
+				},
+				"description_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"description_sv_SE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "sv"
+				},
+				"description_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"description_zh_CN_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "zh"
+				},
+				"destinationURL": {
+					"type": "text",
+					"store": true
+				},
+				"destinationURLParts": {
+					"type": "text",
+					"store": true
+				},
+				"discussion": {
+					"type": "keyword",
+					"store": true
+				},
+				"displayDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"displayDate_Number_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"displayDate_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"emailAddress": {
+					"type": "keyword",
+					"store": true
+				},
+				"emailAddressDomain": {
+					"type": "keyword",
+					"store": true
+				},
+				"en_US_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"en_US_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"en_US_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"endTime": {
+					"type": "long",
+					"store": true
+				},
+				"entryClassName": {
+					"type": "keyword",
+					"store": true
+				},
+				"entryClassPK": {
+					"type": "keyword",
+					"store": true
+				},
+				"entryClassPK_Number_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"entryClassPK_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"entryModelClassName": {
+					"type": "keyword",
+					"store": true
+				},
+				"es_ES_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"es_ES_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"es_ES_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"expirationDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"expirationDate_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"extension": {
+					"type": "keyword",
+					"store": true
+				},
+				"externalReferenceCode": {
+					"type": "text",
+					"store": true
+				},
+				"facetable": {
+					"type": "text",
+					"store": true
+				},
+				"fi_FI_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"fi_FI_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"fi_FI_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"fileEntryId": {
+					"type": "text",
+					"store": true
+				},
+				"fileEntryId_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"fileEntryTypeId": {
+					"type": "keyword",
+					"store": true
+				},
+				"fileExtension": {
+					"type": "text",
+					"store": true
+				},
+				"fileExtension_String_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"fileName": {
+					"type": "text",
+					"store": true
+				},
+				"firstName": {
+					"type": "text",
+					"store": true
+				},
+				"firstName_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"folderId": {
+					"type": "keyword",
+					"store": true
+				},
+				"fr_FR_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"fr_FR_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"fr_FR_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"fullName": {
+					"type": "text",
+					"store": true
+				},
+				"geoLocation": {
+					"type": "geo_point",
+					"store": true,
+					"fields": {
+						"geopoint": {
+							"type": "keyword",
+							"store": true
+						}
+					}
+				},
+				"groupId": {
+					"type": "keyword",
+					"store": true
+				},
+				"groupIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"groupRoleId": {
+					"type": "keyword",
+					"store": true
+				},
+				"hasChildCPDefinitions": {
+					"type": "text",
+					"store": true
+				},
+				"head": {
+					"type": "keyword",
+					"store": true
+				},
+				"headListable": {
+					"type": "text",
+					"store": true
+				},
+				"height": {
+					"type": "text",
+					"store": true
+				},
+				"height_sortable": {
+					"type": "float"
+				},
+				"hidden": {
+					"type": "keyword",
+					"store": true
+				},
+				"hu_HU_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"hu_HU_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"hu_HU_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"id": {
+					"type": "keyword",
+					"store": true
+				},
+				"ignored": {
+					"type": "keyword",
+					"store": true
+				},
+				"isIgnoreSKUCombinations": {
+					"type": "text",
+					"store": true
+				},
+				"itemsQuantity": {
+					"type": "text",
+					"store": true
+				},
+				"itemsQuantity_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"ja_JP_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"ja_JP_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"ja_JP_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"key": {
+					"type": "text",
+					"store": true
+				},
+				"label": {
+					"type": "text",
+					"store": true
+				},
+				"label_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"label_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"label_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"label_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"label_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"label_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"label_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"label_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"label_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"label_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"label_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"label_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"label_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"language": {
+					"type": "text",
+					"store": true
+				},
+				"languageId": {
+					"type": "keyword",
+					"store": true
+				},
+				"lastLoginDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"lastLoginDate_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"lastName": {
+					"type": "text",
+					"store": true
+				},
+				"lastName_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"lastPostDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"latest": {
+					"type": "text",
+					"store": true
+				},
+				"latitude": {
+					"type": "text",
+					"store": true
+				},
+				"latitude_sortable": {
+					"type": "float"
+				},
+				"layoutUuid": {
+					"type": "keyword",
+					"store": true
+				},
+				"leftOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"localized_name": {
+					"type": "text",
+					"store": true
+				},
+				"localized_name_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"localized_name_ar_SA_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ar"
+				},
+				"localized_name_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"localized_name_ca_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ca"
+				},
+				"localized_name_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"localized_name_de_DE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "de"
+				},
+				"localized_name_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"localized_name_en_US_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "en"
+				},
+				"localized_name_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"localized_name_es_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "es"
+				},
+				"localized_name_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"localized_name_fi_FI_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fi"
+				},
+				"localized_name_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"localized_name_fr_FR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fr"
+				},
+				"localized_name_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"localized_name_hu_HU_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "hu"
+				},
+				"localized_name_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"localized_name_ja_JP_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ja"
+				},
+				"localized_name_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"localized_name_nl_NL_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "nl"
+				},
+				"localized_name_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"localized_name_pt_BR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "pt"
+				},
+				"localized_name_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"localized_name_sv_SE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "sv"
+				},
+				"localized_name_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"localized_name_zh_CN_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "zh"
+				},
+				"localized_title": {
+					"type": "text",
+					"store": true
+				},
+				"localized_title_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"localized_title_ar_SA_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ar"
+				},
+				"localized_title_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"localized_title_ca_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ca"
+				},
+				"localized_title_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"localized_title_de_DE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "de"
+				},
+				"localized_title_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"localized_title_en_US_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "en"
+				},
+				"localized_title_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"localized_title_es_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "es"
+				},
+				"localized_title_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"localized_title_fi_FI_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fi"
+				},
+				"localized_title_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"localized_title_fr_FR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fr"
+				},
+				"localized_title_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"localized_title_hu_HU_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "hu"
+				},
+				"localized_title_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"localized_title_ja_JP_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ja"
+				},
+				"localized_title_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"localized_title_nl_NL_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "nl"
+				},
+				"localized_title_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"localized_title_pt_BR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "pt"
+				},
+				"localized_title_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"localized_title_sv_SE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "sv"
+				},
+				"localized_title_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"localized_title_zh_CN_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "zh"
+				},
+				"longitude": {
+					"type": "text",
+					"store": true
+				},
+				"longitude_sortable": {
+					"type": "float"
+				},
+				"mimeType": {
+					"type": "keyword",
+					"store": true
+				},
+				"mimeType_String_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"mode": {
+					"type": "text",
+					"store": true
+				},
+				"modified": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"modified_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"name": {
+					"type": "text",
+					"store": true
+				},
+				"name_String_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"name_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"name_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"name_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"name_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"name_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"name_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"name_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"name_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"name_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"name_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"name_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"name_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"name_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"name_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"nestedFieldArray": {
+					"type": "nested",
+					"properties": {
+						"fieldName": {
+							"type": "keyword"
+						},
+						"valueFieldName": {
+							"type": "keyword"
+						},
+						"value_binary": {
+							"type": "binary"
+						},
+						"value_boolean": {
+							"type": "boolean"
+						},
+						"value_date": {
+							"type": "date",
+							"format": "yyyyMMddHHmmss"
+						},
+						"value_double": {
+							"type": "double"
+						},
+						"value_integer": {
+							"type": "integer"
+						},
+						"value_keyword": {
+							"type": "keyword"
+						},
+						"value_keyword_lowercase": {
+							"type": "keyword",
+							"normalizer": "lowercase"
+						},
+						"value_long": {
+							"type": "long"
+						},
+						"value_text": {
+							"type": "text"
+						}
+					}
+				},
+				"nl_NL_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"nl_NL_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"nl_NL_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"nodeId": {
+					"type": "keyword",
+					"store": true
+				},
+				"objectDefinitionId": {
+					"type": "text",
+					"store": true
+				},
+				"optionsIds": {
+					"type": "text",
+					"store": true
+				},
+				"optionsIds_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"optionsNames": {
+					"type": "keyword",
+					"store": true
+				},
+				"orderCreatorEmailAddress": {
+					"type": "keyword",
+					"store": true
+				},
+				"orderOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"orderStatus": {
+					"type": "keyword",
+					"store": true
+				},
+				"organizationCount": {
+					"type": "text",
+					"store": true
+				},
+				"organizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"organizationIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"parentCategoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"parentCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"parentOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"path": {
+					"type": "keyword",
+					"store": true
+				},
+				"priority": {
+					"type": "double",
+					"store": true
+				},
+				"priority_Number_sortable": {
+					"type": "float"
+				},
+				"priority_sortable": {
+					"type": "float"
+				},
+				"privateLayout": {
+					"type": "text",
+					"store": true
+				},
+				"productTypeName": {
+					"type": "keyword",
+					"store": true
+				},
+				"properties": {
+					"type": "keyword",
+					"store": true
+				},
+				"pt_BR_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"pt_BR_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"pt_BR_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"publishDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"publishDate_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"published": {
+					"type": "text",
+					"store": true
+				},
+				"purchasable": {
+					"type": "text",
+					"store": true
+				},
+				"readCount": {
+					"type": "keyword",
+					"store": true
+				},
+				"readOnly": {
+					"type": "text",
+					"store": true
+				},
+				"recordSetId": {
+					"type": "keyword",
+					"store": true
+				},
+				"regionCode": {
+					"type": "text",
+					"store": true
+				},
+				"relatedEntityClassNameId": {
+					"type": "text",
+					"store": true
+				},
+				"relatedEntityClassNameId_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"relatedEntityClassPK": {
+					"type": "text",
+					"store": true
+				},
+				"relatedEntityClassPK_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"relatedEntry": {
+					"type": "text",
+					"store": true
+				},
+				"removedByUser": {
+					"type": "keyword"
+				},
+				"removedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"requestCount": {
+					"type": "integer",
+					"store": true
+				},
+				"resourceClassNameId": {
+					"type": "text",
+					"store": true
+				},
+				"resourceName": {
+					"type": "text",
+					"store": true
+				},
+				"resourceName_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"resourceName_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"resourceName_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"resourceName_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"resourceName_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"resourceName_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"resourceName_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"resourceName_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"resourceName_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"resourceName_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"resourceName_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"resourceName_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"resourceName_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"resourcePermissionName": {
+					"type": "text",
+					"store": true
+				},
+				"rightOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"roleId": {
+					"type": "keyword",
+					"store": true
+				},
+				"roleIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"roleNames": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "lowercase"
+				},
+				"rootEntryClassName": {
+					"type": "keyword",
+					"store": true
+				},
+				"rootEntryClassPK": {
+					"type": "keyword",
+					"store": true
+				},
+				"scopeGroupId": {
+					"type": "keyword",
+					"store": true
+				},
+				"screenName": {
+					"type": "keyword",
+					"store": true
+				},
+				"screenName_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"size": {
+					"type": "keyword",
+					"store": true
+				},
+				"size_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"sku": {
+					"type": "text",
+					"fields": {
+						"1_10_ngram": {
+							"type": "text",
+							"analyzer": "1_10_ngram"
+						},
+						"reverse": {
+							"type": "text",
+							"analyzer": "reverse_keyword_lowercase"
+						}
+					},
+					"analyzer": "keyword_lowercase"
+				},
+				"skuExternalReferenceCode": {
+					"type": "keyword",
+					"store": true
+				},
+				"sku_String_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"skus": {
+					"type": "text",
+					"fields": {
+						"1_10_ngram": {
+							"type": "text",
+							"analyzer": "1_10_ngram"
+						},
+						"reverse": {
+							"type": "text",
+							"analyzer": "reverse_keyword_lowercase"
+						}
+					},
+					"analyzer": "text_whitespace_lowercase"
+				},
+				"sourceURL": {
+					"type": "text",
+					"store": true
+				},
+				"sourceURLParts": {
+					"type": "text",
+					"store": true
+				},
+				"specificationOptionsIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"specificationOptionsIds_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"specificationOptionsNames": {
+					"type": "keyword",
+					"store": true
+				},
+				"specificationOptionsValuesNames": {
+					"type": "text",
+					"store": true
+				},
+				"stagingGroup": {
+					"type": "text",
+					"store": true
+				},
+				"state": {
+					"type": "text",
+					"store": true
+				},
+				"status": {
+					"type": "keyword",
+					"store": true
+				},
+				"statusByUserId": {
+					"type": "keyword",
+					"store": true
+				},
+				"storageType": {
+					"type": "text",
+					"store": true
+				},
+				"street1": {
+					"type": "text",
+					"store": true
+				},
+				"structureKey": {
+					"type": "text",
+					"store": true
+				},
+				"structureVersionId": {
+					"type": "text",
+					"store": true
+				},
+				"subscribed": {
+					"type": "text",
+					"store": true
+				},
+				"subscriptionEnabled": {
+					"type": "text",
+					"store": true
+				},
+				"subtitle": {
+					"type": "text",
+					"store": true
+				},
+				"sv_SE_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"sv_SE_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"sv_SE_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"targetType": {
+					"type": "keyword",
+					"store": true
+				},
+				"teamIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"threadId": {
+					"type": "keyword",
+					"store": true
+				},
+				"title": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"title_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"title_ar_SA_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ar"
+				},
+				"title_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"title_ca_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ca"
+				},
+				"title_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"title_de_DE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "de"
+				},
+				"title_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"title_en_US_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "en"
+				},
+				"title_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish",
+					"search_analyzer": "liferay_analyzer_es"
+				},
+				"title_es_ES_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "es"
+				},
+				"title_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"title_fi_FI_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fi"
+				},
+				"title_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"title_fr_FR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "fr"
+				},
+				"title_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"title_hu_HU_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "hu"
+				},
+				"title_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"title_ja_JP_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "ja"
+				},
+				"title_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"title_nl_NL_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "nl"
+				},
+				"title_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"title_pt_BR_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "pt"
+				},
+				"title_sortable": {
+					"type": "keyword",
+					"store": true
+				},
+				"title_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"title_sv_SE_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "sv"
+				},
+				"title_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"title_zh_CN_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "zh"
+				},
+				"treePath": {
+					"type": "keyword",
+					"store": true
+				},
+				"type": {
+					"type": "keyword",
+					"store": true
+				},
+				"type_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				},
+				"url": {
+					"type": "text",
+					"store": true
+				},
+				"urlParts": {
+					"type": "text",
+					"store": true
+				},
+				"urlTitle_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"urlTitle_en_US_String_sortable": {
+					"type": "icu_collation_keyword",
+					"store": true,
+					"language": "en"
+				},
+				"url_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english",
+					"search_analyzer": "liferay_analyzer_en"
+				},
+				"userGroupId": {
+					"type": "keyword",
+					"store": true
+				},
+				"userGroupIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"userGroupRoleIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"userGroupRoleNames": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "lowercase"
+				},
+				"userId": {
+					"type": "keyword",
+					"store": true
+				},
+				"userName": {
+					"type": "keyword",
+					"store": true,
+					"fields": {
+						"text": {
+							"type": "text"
+						}
+					}
+				},
+				"uuid": {
+					"type": "text",
+					"store": true
+				},
+				"version": {
+					"type": "keyword",
+					"store": true
+				},
+				"versionCount": {
+					"type": "text",
+					"store": true
+				},
+				"versionCount_sortable": {
+					"type": "float"
+				},
+				"viewCount": {
+					"type": "long",
+					"store": true
+				},
+				"viewCount_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"visibilityType": {
+					"type": "text",
+					"store": true
+				},
+				"visibilityType_sortable": {
+					"type": "long",
+					"store": true
+				},
+				"visible": {
+					"type": "keyword",
+					"store": true
+				},
+				"zh_CN_ATTRIBUTE_package-quantity_VALUES_NAMES": {
+					"type": "keyword",
+					"store": true
+				},
+				"zh_CN_SPECIFICATION_material_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"zh_CN_SPECIFICATION_warranty_VALUE_NAME": {
+					"type": "keyword",
+					"store": true
+				},
+				"zip": {
+					"type": "text",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-workflow-metrics-sla-task-results": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"active": {
+					"type": "boolean",
+					"store": true
+				},
+				"assigneeIds": {
+					"type": "long",
+					"store": true
+				},
+				"assigneeType": {
+					"type": "keyword",
+					"store": true
+				},
+				"breached": {
+					"type": "boolean",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"completionDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"completionUserId": {
+					"type": "long",
+					"store": true
+				},
+				"deleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"instanceCompleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"instanceCompletionDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"instanceId": {
+					"type": "long",
+					"store": true
+				},
+				"modifiedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"nodeId": {
+					"type": "long",
+					"store": true
+				},
+				"onTime": {
+					"type": "boolean",
+					"store": true
+				},
+				"processId": {
+					"type": "long",
+					"store": true
+				},
+				"slaDefinitionId": {
+					"type": "long",
+					"store": true
+				},
+				"status": {
+					"type": "keyword",
+					"store": true
+				},
+				"taskId": {
+					"type": "long",
+					"store": true
+				},
+				"taskName": {
+					"type": "keyword",
+					"store": true
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-workflow-metrics-sla-instance-results": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"active": {
+					"type": "boolean",
+					"store": true
+				},
+				"blocked": {
+					"type": "boolean",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"completionDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"deleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"elapsedTime": {
+					"type": "long",
+					"store": true
+				},
+				"instanceCompleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"instanceId": {
+					"type": "long",
+					"store": true
+				},
+				"modifiedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"onTime": {
+					"type": "boolean",
+					"store": true
+				},
+				"overdueDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"processId": {
+					"type": "long",
+					"store": true
+				},
+				"remainingTime": {
+					"type": "long",
+					"store": true
+				},
+				"slaDefinitionId": {
+					"type": "long",
+					"store": true
+				},
+				"status": {
+					"type": "keyword",
+					"store": true
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-workflow-metrics-nodes": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_string_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "string",
+						"mapping": {
+							"normalizer": "keyword_lowercase",
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"deleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"id": {
+					"type": "long",
+					"store": true
+				},
+				"initial": {
+					"type": "boolean",
+					"store": true
+				},
+				"modifiedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"name": {
+					"type": "keyword",
+					"store": true
+				},
+				"name_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"nodeId": {
+					"type": "long",
+					"store": true
+				},
+				"processId": {
+					"type": "long",
+					"store": true
+				},
+				"terminal": {
+					"type": "boolean",
+					"store": true
+				},
+				"type": {
+					"type": "keyword",
+					"store": true
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				},
+				"userId": {
+					"type": "long",
+					"store": true
+				},
+				"version": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-workflow-metrics-processes": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_ar": {
+						"match": "\\w+_ar\\b|\\w+_ar_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "arabic",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_bg": {
+						"match": "\\w+_bg\\b|\\w+_bg_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "bulgarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ca": {
+						"match": "\\w+_ca\\b|\\w+_ca_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "catalan",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_cs": {
+						"match": "\\w+_cs\\b|\\w+_cs_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "czech",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_da": {
+						"match": "\\w+_da\\b|\\w+_da_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "danish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_de": {
+						"match": "\\w+_de\\b|\\w+_de_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "german",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_el": {
+						"match": "\\w+_el\\b|\\w+_el_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "greek",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_en": {
+						"match": "\\w+_en\\b|\\w+_en_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "english",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_es": {
+						"match": "\\w+_es\\b|\\w+_es_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "spanish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_eu": {
+						"match": "\\w+_eu\\b|\\w+_eu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "basque",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fi": {
+						"match": "\\w+_fi\\b|\\w+_fi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "finnish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fr": {
+						"match": "\\w+_fr\\b|\\w+_fr_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "french",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hi": {
+						"match": "\\w+_hi\\b|\\w+_hi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hindi",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hu": {
+						"match": "\\w+_hu\\b|\\w+_hu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hungarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hy": {
+						"match": "\\w+_hy\\b|\\w+_hy_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "armenian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_id": {
+						"match": "\\w+_id\\b|\\w+_id_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "indonesian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_it": {
+						"match": "\\w+_it\\b|\\w+_it_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "italian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ja": {
+						"match": "\\w+_ja\\b|\\w+_ja_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "kuromoji",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ko": {
+						"match": "\\w+_ko\\b|\\w+_ko_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "cjk",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_nl": {
+						"match": "\\w+_nl\\b|\\w+_nl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "dutch",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_no": {
+						"match": "\\w+_nb\\b|\\w+_nb_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "norwegian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pl": {
+						"match": "\\w+_pl\\b|\\w+_pl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "polish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt": {
+						"match": "\\w+_pt\\b|\\w+_pt_PT\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "portuguese",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt_br": {
+						"match": "*_pt_BR",
+						"match_mapping_type": "string",
+						"mapping": {
+							"analyzer": "brazilian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ro": {
+						"match": "\\w+_ro\\b|\\w+_ro_RO\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "romanian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ru": {
+						"match": "\\w+_ru\\b|\\w+_ru_RU\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "russian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_string_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "string",
+						"mapping": {
+							"normalizer": "keyword_lowercase",
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_sv": {
+						"match": "\\w+_sv\\b|\\w+_sv_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "swedish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_th": {
+						"match": "\\w+_th\\b|\\w+_th_TH\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "thai",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_tr": {
+						"match": "\\w+_tr\\b|\\w+_tr_TR\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "turkish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_zh": {
+						"match": "\\w+_zh\\b|\\w+_zh_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "smartcn",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"active": {
+					"type": "boolean",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"deleted": {
+					"type": "boolean",
+					"store": true
+				},
+				"description": {
+					"type": "text",
+					"store": true
+				},
+				"id": {
+					"type": "long",
+					"store": true
+				},
+				"modifiedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"name": {
+					"type": "keyword",
+					"store": true
+				},
+				"processId": {
+					"type": "long",
+					"store": true
+				},
+				"title": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"title_ar_SA": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "arabic"
+				},
+				"title_ar_SA_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_ca_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "catalan"
+				},
+				"title_ca_ES_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_de_DE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "german"
+				},
+				"title_de_DE_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_en_US": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "english"
+				},
+				"title_en_US_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_es_ES": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "spanish"
+				},
+				"title_es_ES_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_fi_FI": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "finnish"
+				},
+				"title_fi_FI_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_fr_FR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "french"
+				},
+				"title_fr_FR_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_hu_HU": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "hungarian"
+				},
+				"title_hu_HU_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_ja_JP": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "kuromoji"
+				},
+				"title_ja_JP_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_nl_NL": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "dutch"
+				},
+				"title_nl_NL_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_pt_BR": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "brazilian"
+				},
+				"title_pt_BR_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_sv_SE": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "swedish"
+				},
+				"title_sv_SE_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"title_zh_CN": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets",
+					"analyzer": "smartcn"
+				},
+				"title_zh_CN_sortable": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "keyword_lowercase"
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				},
+				"userId": {
+					"type": "long",
+					"store": true
+				},
+				"version": {
+					"type": "keyword",
+					"store": true
+				},
+				"versions": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-20097-commerce-ml-forecast": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				}
+			],
+			"properties": {
+				"actual": {
+					"type": "float",
+					"index": false,
+					"store": true
+				},
+				"assetCategoryId": {
+					"type": "long",
+					"store": true
+				},
+				"commerceAccountId": {
+					"type": "integer",
+					"store": true
+				},
+				"companyId": {
+					"type": "long",
+					"store": true
+				},
+				"forecast": {
+					"type": "float",
+					"index": false,
+					"store": true
+				},
+				"forecastId": {
+					"type": "long",
+					"store": true
+				},
+				"forecastLowerBound": {
+					"type": "float",
+					"index": false,
+					"store": true
+				},
+				"forecastUpperBound": {
+					"type": "float",
+					"index": false,
+					"store": true
+				},
+				"jobId": {
+					"type": "keyword",
+					"index": false,
+					"store": true
+				},
+				"period": {
+					"type": "keyword",
+					"store": true
+				},
+				"scope": {
+					"type": "keyword",
+					"store": true
+				},
+				"sku": {
+					"type": "keyword",
+					"store": true
+				},
+				"target": {
+					"type": "keyword",
+					"store": true
+				},
+				"timestamp": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"timestamp_sortable": {
+					"type": "long",
+					"store": true
+				}
+			}
+		}
+	},
+	"liferay-0": {
+		"mappings": {
+			"dynamic_templates": [
+				{
+					"template_ddmFieldArray_ddmFieldValue_Number_sortable": {
+						"path_match": "ddmFieldArray.ddmFieldValue*Number_sortable",
+						"mapping": {
+							"scaling_factor": 1000,
+							"store": true,
+							"type": "scaled_float"
+						}
+					}
+				},
+				{
+					"template_long_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "long",
+						"mapping": {
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ar": {
+						"match": "\\w+_ar_[A-Z]{2}_sortable\\b|\\w+_ar_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ar",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_bg": {
+						"match": "\\w+_bg_[A-Z]{2}_sortable\\b|\\w+_bg_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "bg",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ca": {
+						"match": "\\w+_ca_[A-Z]{2}_sortable\\b|\\w+_ca_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ca",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_cs": {
+						"match": "\\w+_cs_[A-Z]{2}_sortable\\b|\\w+_cs_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "cs",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_da": {
+						"match": "\\w+_da_[A-Z]{2}_sortable\\b|\\w+_da_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "da",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_de_AT": {
+						"match": "\\w+_de_AT_sortable\\b|\\w+_de_AT_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"country": "AT",
+							"language": "de",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_de": {
+						"match": "\\w+_de_[A-Z]{2}_sortable\\b|\\w+_de_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "de",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_el": {
+						"match": "\\w+_el_[A-Z]{2}_sortable\\b|\\w+_el_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "el",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_en": {
+						"match": "\\w+_en_[A-Z]{2}_sortable\\b|\\w+_en_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "en",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_es": {
+						"match": "\\w+_es_[A-Z]{2}_sortable\\b|\\w+_es_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "es",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_et": {
+						"match": "\\w+_et_[A-Z]{2}_sortable\\b|\\w+_et_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "et",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_eu": {
+						"match": "\\w+_eu_[A-Z]{2}_sortable\\b|\\w+_eu_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "eu",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fa": {
+						"match": "\\w+_fa_[A-Z]{2}_sortable\\b|\\w+_fa_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "fa",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fi": {
+						"match": "\\w+_fi_[A-Z]{2}_sortable\\b|\\w+_fi_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "fi",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fr_CA": {
+						"match": "\\w+_fr_CA_sortable\\b|\\w+_fr_CA_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"country": "CA",
+							"language": "fr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_fr": {
+						"match": "\\w+_fr_[A-Z]{2}_sortable\\b|\\w+_fr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "fr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_gl": {
+						"match": "\\w+_gl_[A-Z]{2}_sortable\\b|\\w+_gl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "gl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hi": {
+						"match": "\\w+_hi_[A-Z]{2}_sortable\\b|\\w+_hi_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hi",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hr": {
+						"match": "\\w+_hr_[A-Z]{2}_sortable\\b|\\w+_hr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hu": {
+						"match": "\\w+_hu_[A-Z]{2}_sortable\\b|\\w+_hu_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hu",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_hy": {
+						"match": "\\w+_hy_[A-Z]{2}_sortable\\b|\\w+_hy_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "hy",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_in": {
+						"match": "\\w+_in_[A-Z]{2}_sortable\\b|\\w+_in_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "in",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_it": {
+						"match": "\\w+_it_[A-Z]{2}_sortable\\b|\\w+_it_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "it",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ja": {
+						"match": "\\w+_ja_[A-Z]{2}_sortable\\b|\\w+_ja_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ja",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_kk": {
+						"match": "\\w+_kk_[A-Z]{2}_sortable\\b|\\w+_kk_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "kk",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ko": {
+						"match": "\\w+_ko_[A-Z]{2}_sortable\\b|\\w+_ko_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ko",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_lo": {
+						"match": "\\w+_lo_[A-Z]{2}_sortable\\b|\\w+_lo_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "lo",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_lt": {
+						"match": "\\w+_lt_[A-Z]{2}_sortable\\b|\\w+_lt_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "lt",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ms": {
+						"match": "\\w+_ms_[A-Z]{2}_sortable\\b|\\w+_ms_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ms",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_nb": {
+						"match": "\\w+_nb_[A-Z]{2}_sortable\\b|\\w+_nb_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "nb",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_nl": {
+						"match": "\\w+_nl_[A-Z]{2}_sortable\\b|\\w+_nl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "nl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_no": {
+						"match": "\\w+_no_[A-Z]{2}_sortable\\b|\\w+_no_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "no",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_pl": {
+						"match": "\\w+_pl_[A-Z]{2}_sortable\\b|\\w+_pl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "pl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_pt": {
+						"match": "\\w+_pt_[A-Z]{2}_sortable\\b|\\w+_pt_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "pt",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ro": {
+						"match": "\\w+_ro_[A-Z]{2}_sortable\\b|\\w+_ro_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ro",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ru": {
+						"match": "\\w+_ru_[A-Z]{2}_sortable\\b|\\w+_ru_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ru",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sk": {
+						"match": "\\w+_sk_[A-Z]{2}_sortable\\b|\\w+_sk_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sk",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sl": {
+						"match": "\\w+_sl_[A-Z]{2}_sortable\\b|\\w+_sl_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sl",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sr": {
+						"match": "\\w+_sr_[A-Z]{2}_sortable\\b|\\w+_sr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_sv": {
+						"match": "\\w+_sv_[A-Z]{2}_sortable\\b|\\w+_sv_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "sv",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_ta": {
+						"match": "\\w+_ta_[A-Z]{2}_sortable\\b|\\w+_ta_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "ta",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_th": {
+						"match": "\\w+_th_[A-Z]{2}_sortable\\b|\\w+_th_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "th",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_tr": {
+						"match": "\\w+_tr_[A-Z]{2}_sortable\\b|\\w+_tr_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "tr",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_uk": {
+						"match": "\\w+_uk_[A-Z]{2}_sortable\\b|\\w+_uk_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "uk",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_vi": {
+						"match": "\\w+_vi_[A-Z]{2}_sortable\\b|\\w+_vi_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "vi",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable_zh": {
+						"match": "\\w+_zh_[A-Z]{2}_sortable\\b|\\w+_zh_[A-Z]{2}_\\w+_sortable\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"language": "zh",
+							"store": true,
+							"type": "icu_collation_keyword"
+						}
+					}
+				},
+				{
+					"template_string_sortable": {
+						"match": "*_sortable",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_geolocation": {
+						"match": "*_geolocation",
+						"mapping": {
+							"fields": {
+								"geopoint": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "geo_point"
+						}
+					}
+				},
+				{
+					"template_ddmFieldArray_ddmFieldValueKeyword": {
+						"path_match": "ddmFieldArray.ddmFieldValueKeyword*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_ddm_keyword": {
+						"match": "ddm__keyword__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_expando_keyword": {
+						"match": "expando__keyword__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"analyzer": "keyword_lowercase",
+							"fields": {
+								"raw": {
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ar": {
+						"match": "\\w+_ar\\b|\\w+_ar_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "arabic",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_bg": {
+						"match": "\\w+_bg\\b|\\w+_bg_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "bulgarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ca": {
+						"match": "\\w+_ca\\b|\\w+_ca_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "catalan",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_cs": {
+						"match": "\\w+_cs\\b|\\w+_cs_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "czech",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_da": {
+						"match": "\\w+_da\\b|\\w+_da_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "danish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_de": {
+						"match": "\\w+_de\\b|\\w+_de_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "german",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_el": {
+						"match": "\\w+_el\\b|\\w+_el_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "greek",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_en": {
+						"match": "\\w+_en\\b|\\w+_en_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "english",
+							"search_analyzer": "liferay_analyzer_en",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_es": {
+						"match": "\\w+_es\\b|\\w+_es_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "spanish",
+							"search_analyzer": "liferay_analyzer_es",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_et": {
+						"match": "\\w+_et\\b|\\w+_et_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "estonian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_eu": {
+						"match": "\\w+_eu\\b|\\w+_eu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "basque",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fa": {
+						"match": "\\w+_fa\\b|\\w+_fa_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "persian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fi": {
+						"match": "\\w+_fi\\b|\\w+_fi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "finnish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_fr": {
+						"match": "\\w+_fr\\b|\\w+_fr_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "french",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_gl": {
+						"match": "\\w+_gl\\b|\\w+_gl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "galician",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hi": {
+						"match": "\\w+_hi\\b|\\w+_hi_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hindi",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hu": {
+						"match": "\\w+_hu\\b|\\w+_hu_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "hungarian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_hy": {
+						"match": "\\w+_hy\\b|\\w+_hy_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "armenian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_in": {
+						"match": "\\w+_in\\b|\\w+_in_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "indonesian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_it": {
+						"match": "\\w+_it\\b|\\w+_it_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "italian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ja": {
+						"match": "\\w+_ja\\b|\\w+_ja_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "kuromoji",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ko": {
+						"match": "\\w+_ko\\b|\\w+_ko_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "cjk",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_lt": {
+						"match": "\\w+_lt\\b|\\w+_lt_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "lithuanian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_nl": {
+						"match": "\\w+_nl\\b|\\w+_nl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "dutch",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_no": {
+						"match": "\\w+_nb\\b|\\w+_nb_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "norwegian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pl": {
+						"match": "\\w+_pl\\b|\\w+_pl_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "polish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt": {
+						"match": "\\w+_pt\\b|\\w+_pt_PT\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "portuguese",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_pt_br": {
+						"match": "*_pt_BR",
+						"match_mapping_type": "string",
+						"mapping": {
+							"analyzer": "brazilian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ro": {
+						"match": "\\w+_ro\\b|\\w+_ro_RO\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "romanian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ru": {
+						"match": "\\w+_ru\\b|\\w+_ru_RU\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "russian",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_sv": {
+						"match": "\\w+_sv\\b|\\w+_sv_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "swedish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_th": {
+						"match": "\\w+_th\\b|\\w+_th_TH\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "thai",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_tr": {
+						"match": "\\w+_tr\\b|\\w+_tr_TR\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "turkish",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_zh": {
+						"match": "\\w+_zh\\b|\\w+_zh_[A-Z]{2}\\b",
+						"match_mapping_type": "string",
+						"match_pattern": "regex",
+						"mapping": {
+							"analyzer": "smartcn",
+							"store": true,
+							"term_vector": "with_positions_offsets",
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ddmFieldArray_ddmFieldValueText": {
+						"path_match": "ddmFieldArray.ddmFieldValueText*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_ddm": {
+						"match": "ddm__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_expando": {
+						"match": "expando__*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				},
+				{
+					"template_double": {
+						"match": "*_double",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "double"
+						}
+					}
+				},
+				{
+					"template_float": {
+						"match": "*_float",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "float"
+						}
+					}
+				},
+				{
+					"template_integer": {
+						"match": "*_integer",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "integer"
+						}
+					}
+				},
+				{
+					"template_long": {
+						"match": "*_long",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "long"
+						}
+					}
+				},
+				{
+					"template_short": {
+						"match": "*_short",
+						"mapping": {
+							"fields": {
+								"keyword": {
+									"store": true,
+									"type": "keyword"
+								}
+							},
+							"store": true,
+							"type": "short"
+						}
+					}
+				},
+				{
+					"template_text_embedding_256": {
+						"path_match": "text_embedding_256*",
+						"mapping": {
+							"dims": 256,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_384": {
+						"path_match": "text_embedding_384*",
+						"mapping": {
+							"dims": 384,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_512": {
+						"path_match": "text_embedding_512*",
+						"mapping": {
+							"dims": 512,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_768": {
+						"path_match": "text_embedding_768*",
+						"mapping": {
+							"dims": 768,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_text_embedding_1024": {
+						"path_match": "text_embedding_1024*",
+						"mapping": {
+							"dims": 1024,
+							"type": "dense_vector"
+						}
+					}
+				},
+				{
+					"template_commerce_attribute": {
+						"match": "*_VALUES_NAMES",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_commerce_attribute_ids": {
+						"match": "*_VALUES_IDS",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_commerce_attribute_id": {
+						"match": "*_VALUE_ID",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_commerce_specification": {
+						"match": "*_VALUE_NAME",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "keyword"
+						}
+					}
+				},
+				{
+					"template_terms_set_required_matches": {
+						"match": "*_required_matches",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "integer"
+						}
+					}
+				},
+				{
+					"template_": {
+						"match": "*",
+						"match_mapping_type": "string",
+						"mapping": {
+							"store": true,
+							"type": "text"
+						}
+					}
+				}
+			],
+			"date_detection": false,
+			"properties": {
+				"advanceStatus": {
+					"type": "keyword",
+					"store": true
+				},
+				"ancestorOrganizationIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"articleId": {
+					"type": "text",
+					"store": true,
+					"analyzer": "keyword_lowercase"
+				},
+				"assetCategoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetInternalCategoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetInternalCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetTagId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetTagIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetTagNames": {
+					"type": "text",
+					"store": true,
+					"fields": {
+						"raw": {
+							"type": "keyword",
+							"store": true
+						}
+					},
+					"term_vector": "with_positions_offsets"
+				},
+				"assetVocabularyCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetVocabularyId": {
+					"type": "keyword",
+					"store": true
+				},
+				"assetVocabularyIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"basePrice": {
+					"type": "double",
+					"store": true
+				},
+				"classTypeId": {
+					"type": "keyword",
+					"store": true
+				},
+				"commerceAccountGroupIds_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"commerceAccountId": {
+					"type": "keyword",
+					"store": true
+				},
+				"companyId": {
+					"type": "keyword",
+					"store": true
+				},
+				"configurationModelAttributeName": {
+					"type": "keyword",
+					"store": true
+				},
+				"configurationModelFactoryPid": {
+					"type": "keyword",
+					"store": true
+				},
+				"configurationModelId": {
+					"type": "keyword",
+					"store": true
+				},
+				"content": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"couponCode": {
+					"type": "keyword",
+					"store": true
+				},
+				"createDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"criterionType_organization_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"criterionType_role_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"criterionType_user_group_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"criterionType_user_required_matches": {
+					"type": "integer",
+					"store": true
+				},
+				"dataRepositoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"ddmContent": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"ddmFieldArray": {
+					"type": "nested",
+					"properties": {
+						"ddmFieldName": {
+							"type": "keyword"
+						},
+						"ddmValueFieldName": {
+							"type": "keyword"
+						}
+					}
+				},
+				"ddmStructureKey": {
+					"type": "keyword",
+					"store": true
+				},
+				"ddmTemplateKey": {
+					"type": "keyword",
+					"store": true
+				},
+				"defaultLanguageId": {
+					"type": "keyword",
+					"store": true
+				},
+				"description": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"destinationURL": {
+					"type": "text",
+					"store": true
+				},
+				"destinationURLParts": {
+					"type": "text",
+					"store": true
+				},
+				"discussion": {
+					"type": "keyword",
+					"store": true
+				},
+				"displayDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"emailAddress": {
+					"type": "keyword",
+					"store": true
+				},
+				"emailAddressDomain": {
+					"type": "keyword",
+					"store": true
+				},
+				"endTime": {
+					"type": "long",
+					"store": true
+				},
+				"entryClassName": {
+					"type": "keyword",
+					"store": true
+				},
+				"entryClassPK": {
+					"type": "keyword",
+					"store": true
+				},
+				"entryModelClassName": {
+					"type": "keyword",
+					"store": true
+				},
+				"expirationDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"extension": {
+					"type": "keyword",
+					"store": true
+				},
+				"fileEntryTypeId": {
+					"type": "keyword",
+					"store": true
+				},
+				"fileExtension": {
+					"type": "text",
+					"store": true
+				},
+				"folderId": {
+					"type": "keyword",
+					"store": true
+				},
+				"geoLocation": {
+					"type": "geo_point",
+					"store": true,
+					"fields": {
+						"geopoint": {
+							"type": "keyword",
+							"store": true
+						}
+					}
+				},
+				"groupId": {
+					"type": "keyword",
+					"store": true
+				},
+				"groupIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"groupRoleId": {
+					"type": "keyword",
+					"store": true
+				},
+				"head": {
+					"type": "keyword",
+					"store": true
+				},
+				"hidden": {
+					"type": "keyword",
+					"store": true
+				},
+				"id": {
+					"type": "keyword",
+					"store": true
+				},
+				"ignored": {
+					"type": "keyword",
+					"store": true
+				},
+				"languageId": {
+					"type": "keyword",
+					"store": true
+				},
+				"lastLoginDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"lastPostDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"layoutUuid": {
+					"type": "keyword",
+					"store": true
+				},
+				"leftOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"mimeType": {
+					"type": "keyword",
+					"store": true
+				},
+				"modified": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"nestedFieldArray": {
+					"type": "nested",
+					"properties": {
+						"fieldName": {
+							"type": "keyword"
+						},
+						"valueFieldName": {
+							"type": "keyword"
+						},
+						"value_binary": {
+							"type": "binary"
+						},
+						"value_boolean": {
+							"type": "boolean"
+						},
+						"value_date": {
+							"type": "date",
+							"format": "yyyyMMddHHmmss"
+						},
+						"value_double": {
+							"type": "double"
+						},
+						"value_integer": {
+							"type": "integer"
+						},
+						"value_keyword": {
+							"type": "keyword"
+						},
+						"value_keyword_lowercase": {
+							"type": "keyword",
+							"normalizer": "lowercase"
+						},
+						"value_long": {
+							"type": "long"
+						},
+						"value_text": {
+							"type": "text"
+						}
+					}
+				},
+				"nodeId": {
+					"type": "keyword",
+					"store": true
+				},
+				"optionsNames": {
+					"type": "keyword",
+					"store": true
+				},
+				"orderCreatorEmailAddress": {
+					"type": "keyword",
+					"store": true
+				},
+				"orderOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"orderStatus": {
+					"type": "keyword",
+					"store": true
+				},
+				"organizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"organizationIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"parentCategoryId": {
+					"type": "keyword",
+					"store": true
+				},
+				"parentCategoryIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"parentOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"path": {
+					"type": "keyword",
+					"store": true
+				},
+				"priority": {
+					"type": "double",
+					"store": true
+				},
+				"productTypeName": {
+					"type": "keyword",
+					"store": true
+				},
+				"properties": {
+					"type": "keyword",
+					"store": true
+				},
+				"publishDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"readCount": {
+					"type": "keyword",
+					"store": true
+				},
+				"recordSetId": {
+					"type": "keyword",
+					"store": true
+				},
+				"removedByUser": {
+					"type": "keyword"
+				},
+				"removedDate": {
+					"type": "date",
+					"store": true,
+					"format": "yyyyMMddHHmmss"
+				},
+				"requestCount": {
+					"type": "integer",
+					"store": true
+				},
+				"rightOrganizationId": {
+					"type": "keyword",
+					"store": true
+				},
+				"roleId": {
+					"type": "keyword",
+					"store": true
+				},
+				"roleIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"roleNames": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "lowercase"
+				},
+				"rootEntryClassName": {
+					"type": "keyword",
+					"store": true
+				},
+				"rootEntryClassPK": {
+					"type": "keyword",
+					"store": true
+				},
+				"scopeGroupId": {
+					"type": "keyword",
+					"store": true
+				},
+				"screenName": {
+					"type": "keyword",
+					"store": true
+				},
+				"size": {
+					"type": "keyword",
+					"store": true
+				},
+				"sku": {
+					"type": "text",
+					"fields": {
+						"1_10_ngram": {
+							"type": "text",
+							"analyzer": "1_10_ngram"
+						},
+						"reverse": {
+							"type": "text",
+							"analyzer": "reverse_keyword_lowercase"
+						}
+					},
+					"analyzer": "keyword_lowercase"
+				},
+				"skuExternalReferenceCode": {
+					"type": "keyword",
+					"store": true
+				},
+				"skus": {
+					"type": "text",
+					"fields": {
+						"1_10_ngram": {
+							"type": "text",
+							"analyzer": "1_10_ngram"
+						},
+						"reverse": {
+							"type": "text",
+							"analyzer": "reverse_keyword_lowercase"
+						}
+					},
+					"analyzer": "text_whitespace_lowercase"
+				},
+				"sourceURL": {
+					"type": "text",
+					"store": true
+				},
+				"sourceURLParts": {
+					"type": "text",
+					"store": true
+				},
+				"specificationOptionsIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"specificationOptionsNames": {
+					"type": "keyword",
+					"store": true
+				},
+				"status": {
+					"type": "keyword",
+					"store": true
+				},
+				"statusByUserId": {
+					"type": "keyword",
+					"store": true
+				},
+				"subtitle": {
+					"type": "text",
+					"store": true
+				},
+				"targetType": {
+					"type": "keyword",
+					"store": true
+				},
+				"teamIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"threadId": {
+					"type": "keyword",
+					"store": true
+				},
+				"title": {
+					"type": "text",
+					"store": true,
+					"term_vector": "with_positions_offsets"
+				},
+				"treePath": {
+					"type": "keyword",
+					"store": true
+				},
+				"type": {
+					"type": "keyword",
+					"store": true
+				},
+				"uid": {
+					"type": "keyword",
+					"store": true
+				},
+				"urlParts": {
+					"type": "text",
+					"store": true
+				},
+				"userGroupId": {
+					"type": "keyword",
+					"store": true
+				},
+				"userGroupIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"userGroupRoleIds": {
+					"type": "keyword",
+					"store": true
+				},
+				"userGroupRoleNames": {
+					"type": "keyword",
+					"store": true,
+					"normalizer": "lowercase"
+				},
+				"userId": {
+					"type": "keyword",
+					"store": true
+				},
+				"userName": {
+					"type": "keyword",
+					"store": true,
+					"fields": {
+						"text": {
+							"type": "text"
+						}
+					}
+				},
+				"version": {
+					"type": "keyword",
+					"store": true
+				},
+				"viewCount": {
+					"type": "long",
+					"store": true
+				},
+				"visible": {
+					"type": "keyword",
+					"store": true
+				}
+			}
+		}
+	}
+}

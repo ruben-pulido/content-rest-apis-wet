@@ -4,13 +4,14 @@ site_id=$(DB_NAME="lp1" site_friendly_url='/guest'; export MYSQL_PWD=test; mysql
 
 echo "site_id: $site_id"
 
+
 echo "*************************************************************************"
-echo "* Get Structured Contents - Flatten = true"
+echo "* Get taxonomy Categories Ranked "
 echo "*************************************************************************"
 
 set -x
-#curl -s -X 'GET' "http://localhost:8080/o/headless-admin-content/v1.0/sites/${site_id}/structured-contents?fields=title,externalReferenceCode,contentFields" \
-curl -s -X 'GET' "http://localhost:8080/o/headless-admin-content/v1.0/sites/${site_id}/structured-contents" \
+#curl -s -X 'GET' "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/ranked?siteId=${site_id}&fields=name,parentTaxonomyCategory" \
+curl -s -X 'GET' "http://localhost:8080/o/headless-admin-taxonomy/v1.0/taxonomy-categories/ranked?siteId=${site_id}&restrictFields=actions,availableLanguages,dateCreated,dateModified,description,externalReferenceCode,siteId,taxonomyCategoryProperties,taxonomyCategoryUsageCount" \
   -H 'Accept-Language: en-US' \
   -u 'test@liferay.com:test' \
   | jq '.'

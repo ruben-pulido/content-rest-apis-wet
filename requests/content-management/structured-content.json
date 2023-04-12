@@ -1,0 +1,26 @@
+{
+  "availableLanguages": [
+    "en-US"
+  ],
+  "contentFields": [
+    {
+      "contentFieldValue": {
+        "data": "<p>c2</p>"
+      },
+      "dataType": "string",
+      "label": "Content",
+      "name": "content",
+      "nestedContentFields": [],
+      "repeatable": false
+    }
+  ],
+  "contentStructureId": 43701,
+  "customFields": [],
+  "description": "<p>desc2</p>",
+  "friendlyUrlPath": "wc2-friendly-url",
+  "keywords": [],
+  "priority": 1,
+  "relatedContents": [],
+  "structuredContentFolderId": 0,
+  "title": "wc2"
+}
