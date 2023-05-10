@@ -1,0 +1,92 @@
+{
+  "title": "layout13",
+  "pagePermissions": [
+    {
+      "actionKeys": [
+        "UPDATE_DISCUSSION",
+        "PERMISSIONS",
+        "UPDATE_LAYOUT_ADVANCED_OPTIONS",
+        "UPDATE_LAYOUT_CONTENT",
+        "CUSTOMIZE",
+        "ADD_LAYOUT",
+        "VIEW",
+        "DELETE",
+        "UPDATE_LAYOUT_BASIC",
+        "DELETE_DISCUSSION",
+        "CONFIGURE_PORTLETS",
+        "UPDATE",
+        "UPDATE_LAYOUT_LIMITED",
+        "ADD_DISCUSSION"
+      ],
+      "roleKey": "My Team 1"
+    },
+    {
+      "actionKeys": [
+        "UPDATE_DISCUSSION",
+        "PERMISSIONS",
+        "UPDATE_LAYOUT_ADVANCED_OPTIONS",
+        "UPDATE_LAYOUT_CONTENT",
+        "CUSTOMIZE",
+        "ADD_LAYOUT",
+        "VIEW",
+        "DELETE",
+        "UPDATE_LAYOUT_BASIC",
+        "DELETE_DISCUSSION",
+        "CONFIGURE_PORTLETS",
+        "UPDATE",
+        "UPDATE_LAYOUT_LIMITED",
+        "ADD_DISCUSSION"
+      ],
+      "roleKey": "Owner"
+    },
+    {
+      "actionKeys": [
+        "ADD_LAYOUT",
+        "ADD_DISCUSSION"
+      ],
+      "roleKey": "Site Member"
+    },
+    {
+      "actionKeys": [
+        "VIEW"
+      ],
+      "roleKey": "Guest"
+    },
+    {
+      "actionKeys": [
+        "PERMISSIONS"
+      ],
+      "roleKey": "Portal Content Reviewer"
+    },
+    {
+      "actionKeys": [
+        "CUSTOMIZE"
+      ],
+      "roleKey": "Site Content Reviewer"
+    },
+    {
+      "actionKeys": [
+        "UPDATE_DISCUSSION"
+      ],
+      "roleKey": "Analytics Administrator"
+    },
+    {
+      "actionKeys": [
+        "UPDATE_LAYOUT_ADVANCED_OPTIONS"
+      ],
+      "roleKey": "Power User"
+    },
+    {
+      "actionKeys": [
+        "UPDATE_LAYOUT_CONTENT"
+      ],
+      "roleKey": "Publications User"
+    },
+    {
+      "actionKeys": [
+        "VIEW"
+      ],
+      "roleKey": "User"
+    }
+  ]
+}

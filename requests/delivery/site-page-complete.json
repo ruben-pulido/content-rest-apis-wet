@@ -1,0 +1,117 @@
+{
+  "availableLanguages": [
+    "en-US",
+    "es-ES"
+  ],
+  "customFields": [],
+  "friendlyUrlPath": "/layout1_6_en",
+  "friendlyUrlPath_i18n": {
+    "en-US": "/layout1_6_en",
+    "es-ES": "/layout1_6_es"
+  },
+  "keywords": [
+    "tag1",
+    "tag2"
+  ],
+  "pageSettings": {
+    "customMetaTags": [
+      {
+        "key": "my-property1",
+        "value": "my-property-content-1-en",
+        "value_i18n": {
+          "en-US": "my-property-content-1-en",
+          "es-ES": "my-property-content-1-es"
+        }
+      }
+    ],
+    "hiddenFromNavigation": true,
+    "openGraphSettings": {
+      "description": "My Custom Description EN",
+      "description_i18n": {
+        "en-US": "My Custom Description EN",
+        "es-ES": "My Custom Description ES"
+      },
+      "image": {
+        "contentType": "Document",
+        "id": 44001
+      },
+      "imageAlt": "My Image Alt Description EN",
+      "imageAlt_i18n": {
+        "en-US": "My Image Alt Description EN",
+        "es-ES": "My Image Alt Description ES"
+      },
+      "title": "My Custom Title EN",
+      "title_i18n": {
+        "en-US": "My Custom Title EN",
+        "es-ES": "My Custom Title ES"
+      }
+    },
+    "seoSettings": {
+      "customCanonicalURL": "http://localhost:8080/custom-canonical-url-layout1_6-en",
+      "customCanonicalURL_i18n": {
+        "en-US": "http://localhost:8080/custom-canonical-url-layout1_6-en",
+        "es-ES": "http://localhost:8080/custom-canonical-url-layout1_6-es"
+      },
+      "description": "My Description 1_6",
+      "description_i18n": {
+        "en-US": "My Description 1_6 en",
+        "es-ES": "My Description 1_6 es"
+      },
+      "htmlTitle": "My HTML Title 1_6",
+      "htmlTitle_i18n": {
+        "en-US": "My HTML Title 1_6",
+        "es-ES": "My HTML Title 1_6"
+      },
+      "robots": "robots line 1 en\nrobots line 2 en",
+      "robots_i18n": {
+        "en-US": "robots line 1 en\nrobots line 2 en",
+        "es-ES": "robots line 1 es\nrobots line 2 es"
+      },
+      "seoKeywords": "keyword1a-en keyword1b-en",
+      "seoKeywords_i18n": {
+        "en-US": "keyword1a-en keyword1b-en",
+        "es-ES": "keyword1a-es keyword1b-es"
+      }
+    }
+  },
+  "pageType": "Content Page",
+  "parentSitePage": {
+    "friendlyUrlPath": "/layout1"
+  },
+  "taxonomyCategoryBriefs": [
+    {
+      "taxonomyCategoryId": 44410,
+      "taxonomyCategoryName": "c2",
+      "taxonomyCategoryName_i18n": {
+        "en-US": "c2"
+      }
+    },
+    {
+      "taxonomyCategoryId": 44425,
+      "taxonomyCategoryName": "c1_1 en",
+      "taxonomyCategoryName_i18n": {
+        "en-US": "c1_1 en",
+        "es-ES": "c1_1 es"
+      }
+    },
+    {
+      "taxonomyCategoryId": 44433,
+      "taxonomyCategoryName": "large",
+      "taxonomyCategoryName_i18n": {
+        "en-US": "large"
+      }
+    },
+    {
+      "taxonomyCategoryId": 44437,
+      "taxonomyCategoryName": "large",
+      "taxonomyCategoryName_i18n": {
+        "en-US": "large"
+      }
+    }
+  ],
+  "title": "layout1_6_en",
+  "title_i18n": {
+    "en-US": "layout1_6_en",
+    "es-ES": "layout1_1_es"
+  }
+}

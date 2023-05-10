@@ -1,0 +1,12 @@
+{
+  "title": "p4",
+  "pageSettings": {
+    "seoSettings": {
+      "siteMapSettings": {
+        "changeFrequency": "Daily",
+        "include": true,
+        "pagePriority": 0.1
+      }
+    }
+  }
+}
