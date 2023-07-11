@@ -5,7 +5,7 @@
   "contentFields": [
     {
       "contentFieldValue": {
-        "data": "<p>c2</p>"
+        "data": "<p>c3</p>"
       },
       "dataType": "string",
       "label": "Content",
@@ -16,11 +16,12 @@
   ],
   "contentStructureId": 43701,
   "customFields": [],
+  "datePublished": "20230-06-01T22:08:00Z",
   "description": "<p>desc2</p>",
-  "friendlyUrlPath": "wc2-friendly-url",
+  "friendlyUrlPath": "wc3-friendly-url",
   "keywords": [],
   "priority": 1,
   "relatedContents": [],
   "structuredContentFolderId": 0,
-  "title": "wc2"
+  "title": "wc3"
 }
